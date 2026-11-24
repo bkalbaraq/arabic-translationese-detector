@@ -1,0 +1,2943 @@
+{
+  "schema_note": "Final frozen v3 evaluation metrics. Checkpoint selection rule: lowest dev eval_loss (selected after observing epoch 1 prevented overfitting on modern books). Primary Haiku benchmark: non-recalled subset (char3 Jaccard < 0.45, 236 pairs); all 436 pairs reported as secondary. Zero copyrighted text stored.",
+  "checkpoint_rule": "lowest_dev_eval_loss",
+  "dataset_sizes": {
+    "clean_test_pairs": 461,
+    "haiku_non_recalled_pairs": 236,
+    "haiku_all_pairs": 436,
+    "hard_test_items": 83,
+    "hard_test_pairs": 36,
+    "calque_pairs": 38,
+    "nazarat_essays": 3075,
+    "nazarat_adapted": 376,
+    "hayati": 1550,
+    "sabil_altaj": 513,
+    "maba3d_alayyam": 1639,
+    "opus_per_corpus": 1000
+  },
+  "train_metas": {
+    "seed_42": {
+      "data_variant": "v3",
+      "selection_metric": "eval_loss",
+      "epochs": 3,
+      "seed": 42,
+      "best_dev_epoch": 1.0,
+      "best_dev_loss": 0.133,
+      "best_dev_acc_at_best_loss": 0.9547,
+      "best_model_checkpoint": "models/v3_camelbert/checkpoint-374",
+      "reused_existing_checkpoint": true,
+      "epoch_history": [
+        {
+          "epoch": 1.0,
+          "eval_acc": 0.9547,
+          "eval_loss": 0.133
+        },
+        {
+          "epoch": 2.0,
+          "eval_acc": 0.9413,
+          "eval_loss": 0.225
+        },
+        {
+          "epoch": 3.0,
+          "eval_acc": 0.9467,
+          "eval_loss": 0.3017
+        }
+      ]
+    },
+    "seed_101": {
+      "data_variant": "v3",
+      "selection_metric": "eval_loss",
+      "epochs": 3,
+      "seed": 101,
+      "best_dev_epoch": 1.0,
+      "best_dev_loss": 0.1473,
+      "best_dev_acc_at_best_loss": 0.9413,
+      "best_model_checkpoint": "models/v3_camelbert_s101_devloss/checkpoint-374",
+      "epoch_history": [
+        {
+          "epoch": 1.0,
+          "eval_acc": 0.9413,
+          "eval_loss": 0.1473
+        },
+        {
+          "epoch": 2.0,
+          "eval_acc": 0.956,
+          "eval_loss": 0.1683
+        },
+        {
+          "epoch": 3.0,
+          "eval_acc": 0.956,
+          "eval_loss": 0.2382
+        }
+      ]
+    },
+    "seed_202": {
+      "data_variant": "v3",
+      "selection_metric": "eval_loss",
+      "epochs": 3,
+      "seed": 202,
+      "best_dev_epoch": 1.0,
+      "best_dev_loss": 0.1442,
+      "best_dev_acc_at_best_loss": 0.9427,
+      "best_model_checkpoint": "models/v3_camelbert_s202_devloss/checkpoint-374",
+      "epoch_history": [
+        {
+          "epoch": 1.0,
+          "eval_acc": 0.9427,
+          "eval_loss": 0.1442
+        },
+        {
+          "epoch": 2.0,
+          "eval_acc": 0.9507,
+          "eval_loss": 0.2076
+        },
+        {
+          "epoch": 3.0,
+          "eval_acc": 0.9507,
+          "eval_loss": 0.2325
+        }
+      ]
+    }
+  },
+  "single_model_seed_42": {
+    "clean_test": {
+      "n": 922,
+      "n_pairs": 461,
+      "acc": 94.58,
+      "classical_pct_fusha": 94.79,
+      "twin_pct_aranjiya": 94.36,
+      "pairwise_acc": 98.7,
+      "pairwise_ok": 455
+    },
+    "haiku_non_recalled_lt_045": {
+      "n": 472,
+      "n_pairs": 236,
+      "acc": 66.74,
+      "classical_pct_fusha": 97.88,
+      "twin_pct_aranjiya": 35.59,
+      "pairwise_acc": 91.95,
+      "pairwise_ok": 217,
+      "twin_p_quartiles": {
+        "q1": 0.0064,
+        "median": 0.1307,
+        "q3": 0.863
+      }
+    },
+    "haiku_all_436": {
+      "n": 872,
+      "n_pairs": 436,
+      "acc": 63.99,
+      "classical_pct_fusha": 96.56,
+      "twin_pct_aranjiya": 31.42,
+      "pairwise_acc": 88.99,
+      "pairwise_ok": 388,
+      "twin_p_quartiles": {
+        "q1": 0.0065,
+        "median": 0.0574,
+        "q3": 0.7443
+      }
+    },
+    "hard_test": {
+      "n": 83,
+      "n_pairs": 36,
+      "acc": 86.75,
+      "classical_pct_fusha": 91.67,
+      "twin_pct_aranjiya": 82.98,
+      "pairwise_acc": 97.22,
+      "pairwise_ok": 35
+    },
+    "calque_pairs": {
+      "contexts": {
+        "overall": {
+          "n": 38,
+          "correct": 36,
+          "pct": 94.74,
+          "mean_diff": 2.4856
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": 16,
+            "correct": 15,
+            "pct": 93.75,
+            "mean_diff": 3.5544
+          },
+          "original_is_calque": {
+            "n": 22,
+            "correct": 21,
+            "pct": 95.45,
+            "mean_diff": 1.7083
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": 26,
+            "correct": 25,
+            "pct": 96.15,
+            "mean_diff": 1.887
+          },
+          "nazarat": {
+            "n": 12,
+            "correct": 11,
+            "pct": 91.67,
+            "mean_diff": 3.7826
+          }
+        },
+        "wrong_ids": [
+          "cp13",
+          "cp30"
+        ],
+        "wrong_pairs": [
+          {
+            "id": "cp13",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.191,
+            "p_calque": 0.9368,
+            "p_native": 0.9472
+          },
+          {
+            "id": "cp30",
+            "book": "nazarat",
+            "direction": "calque_inserted",
+            "diff": -0.0091,
+            "p_calque": 0.001,
+            "p_native": 0.001
+          }
+        ]
+      },
+      "sentences": {
+        "overall": {
+          "n": 38,
+          "correct": 38,
+          "pct": 100.0,
+          "mean_diff": 4.5232
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": 16,
+            "correct": 16,
+            "pct": 100.0,
+            "mean_diff": 5.9457
+          },
+          "original_is_calque": {
+            "n": 22,
+            "correct": 22,
+            "pct": 100.0,
+            "mean_diff": 3.4886
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": 26,
+            "correct": 26,
+            "pct": 100.0,
+            "mean_diff": 3.9949
+          },
+          "nazarat": {
+            "n": 12,
+            "correct": 12,
+            "pct": 100.0,
+            "mean_diff": 5.6678
+          }
+        },
+        "wrong_ids": [],
+        "wrong_pairs": []
+      }
+    },
+    "modern_books": {
+      "nazarat_essays": {
+        "n": 3075,
+        "pct_fusha": 91.8,
+        "pct_aranjiya": 8.2,
+        "mean_p_aranjiya": 0.0965
+      },
+      "nazarat_adapted": {
+        "n": 376,
+        "pct_fusha": 81.91,
+        "pct_aranjiya": 18.09,
+        "mean_p_aranjiya": 0.2051
+      },
+      "hayati": {
+        "n": 1550,
+        "pct_fusha": 79.1,
+        "pct_aranjiya": 20.9,
+        "mean_p_aranjiya": 0.2334
+      },
+      "sabil_altaj": {
+        "n": 513,
+        "pct_fusha": 74.27,
+        "pct_aranjiya": 25.73,
+        "mean_p_aranjiya": 0.2737
+      },
+      "maba3d_alayyam": {
+        "n": 1639,
+        "pct_fusha": 28.62,
+        "pct_aranjiya": 71.38,
+        "mean_p_aranjiya": 0.7015
+      }
+    },
+    "opus_test_per_corpus": {
+      "opus:OpenSubtitles": {
+        "n": 1000,
+        "pct_fusha": 4.0,
+        "pct_aranjiya": 96.0,
+        "mean_p_aranjiya": 0.9497
+      },
+      "opus:TED2020": {
+        "n": 1000,
+        "pct_fusha": 1.2,
+        "pct_aranjiya": 98.8,
+        "mean_p_aranjiya": 0.9808
+      },
+      "opus:News-Commentary": {
+        "n": 1000,
+        "pct_fusha": 0.0,
+        "pct_aranjiya": 100.0,
+        "mean_p_aranjiya": 0.9951
+      },
+      "opus:GlobalVoices": {
+        "n": 1000,
+        "pct_fusha": 1.4,
+        "pct_aranjiya": 98.6,
+        "mean_p_aranjiya": 0.9744
+      }
+    },
+    "regression_masking": {
+      "classical_pct_fusha_orig": 94.79,
+      "classical_pct_fusha_masked": 95.88,
+      "classical_flips_f2a": 0,
+      "classical_flip_rate_pct": 0.0,
+      "twins_pct_aranjiya_orig": 94.36,
+      "twins_pct_aranjiya_masked": 93.93,
+      "twins_flips_a2f": 2,
+      "twins_flip_rate_pct": 0.43
+    },
+    "regression_voice_on_nazarat_essays": {
+      "with_voice_words": {
+        "n": 242,
+        "pct_fusha": 88.02,
+        "pct_aranjiya": 11.98,
+        "mean_p_aranjiya": 0.1317
+      },
+      "without_voice_words": {
+        "n": 2833,
+        "pct_fusha": 92.13,
+        "pct_aranjiya": 7.87,
+        "mean_p_aranjiya": 0.0935
+      },
+      "pct_fusha_gap": 4.11
+    }
+  },
+  "all_seeds": {
+    "seed_42": {
+      "clean_test": {
+        "n": 922,
+        "n_pairs": 461,
+        "acc": 94.58,
+        "classical_pct_fusha": 94.79,
+        "twin_pct_aranjiya": 94.36,
+        "pairwise_acc": 98.7,
+        "pairwise_ok": 455
+      },
+      "haiku_non_recalled_lt_045": {
+        "n": 472,
+        "n_pairs": 236,
+        "acc": 66.74,
+        "classical_pct_fusha": 97.88,
+        "twin_pct_aranjiya": 35.59,
+        "pairwise_acc": 91.95,
+        "pairwise_ok": 217,
+        "twin_p_quartiles": {
+          "q1": 0.0064,
+          "median": 0.1307,
+          "q3": 0.863
+        }
+      },
+      "haiku_all_436": {
+        "n": 872,
+        "n_pairs": 436,
+        "acc": 63.99,
+        "classical_pct_fusha": 96.56,
+        "twin_pct_aranjiya": 31.42,
+        "pairwise_acc": 88.99,
+        "pairwise_ok": 388,
+        "twin_p_quartiles": {
+          "q1": 0.0065,
+          "median": 0.0574,
+          "q3": 0.7443
+        }
+      },
+      "hard_test": {
+        "n": 83,
+        "n_pairs": 36,
+        "acc": 86.75,
+        "classical_pct_fusha": 91.67,
+        "twin_pct_aranjiya": 82.98,
+        "pairwise_acc": 97.22,
+        "pairwise_ok": 35
+      },
+      "calque_pairs": {
+        "contexts": {
+          "overall": {
+            "n": 38,
+            "correct": 36,
+            "pct": 94.74,
+            "mean_diff": 2.4856
+          },
+          "by_direction": {
+            "calque_inserted": {
+              "n": 16,
+              "correct": 15,
+              "pct": 93.75,
+              "mean_diff": 3.5544
+            },
+            "original_is_calque": {
+              "n": 22,
+              "correct": 21,
+              "pct": 95.45,
+              "mean_diff": 1.7083
+            }
+          },
+          "by_book": {
+            "hayati": {
+              "n": 26,
+              "correct": 25,
+              "pct": 96.15,
+              "mean_diff": 1.887
+            },
+            "nazarat": {
+              "n": 12,
+              "correct": 11,
+              "pct": 91.67,
+              "mean_diff": 3.7826
+            }
+          },
+          "wrong_ids": [
+            "cp13",
+            "cp30"
+          ],
+          "wrong_pairs": [
+            {
+              "id": "cp13",
+              "book": "hayati",
+              "direction": "original_is_calque",
+              "diff": -0.191,
+              "p_calque": 0.9368,
+              "p_native": 0.9472
+            },
+            {
+              "id": "cp30",
+              "book": "nazarat",
+              "direction": "calque_inserted",
+              "diff": -0.0091,
+              "p_calque": 0.001,
+              "p_native": 0.001
+            }
+          ]
+        },
+        "sentences": {
+          "overall": {
+            "n": 38,
+            "correct": 38,
+            "pct": 100.0,
+            "mean_diff": 4.5232
+          },
+          "by_direction": {
+            "calque_inserted": {
+              "n": 16,
+              "correct": 16,
+              "pct": 100.0,
+              "mean_diff": 5.9457
+            },
+            "original_is_calque": {
+              "n": 22,
+              "correct": 22,
+              "pct": 100.0,
+              "mean_diff": 3.4886
+            }
+          },
+          "by_book": {
+            "hayati": {
+              "n": 26,
+              "correct": 26,
+              "pct": 100.0,
+              "mean_diff": 3.9949
+            },
+            "nazarat": {
+              "n": 12,
+              "correct": 12,
+              "pct": 100.0,
+              "mean_diff": 5.6678
+            }
+          },
+          "wrong_ids": [],
+          "wrong_pairs": []
+        }
+      },
+      "modern_books": {
+        "nazarat_essays": {
+          "n": 3075,
+          "pct_fusha": 91.8,
+          "pct_aranjiya": 8.2,
+          "mean_p_aranjiya": 0.0965
+        },
+        "nazarat_adapted": {
+          "n": 376,
+          "pct_fusha": 81.91,
+          "pct_aranjiya": 18.09,
+          "mean_p_aranjiya": 0.2051
+        },
+        "hayati": {
+          "n": 1550,
+          "pct_fusha": 79.1,
+          "pct_aranjiya": 20.9,
+          "mean_p_aranjiya": 0.2334
+        },
+        "sabil_altaj": {
+          "n": 513,
+          "pct_fusha": 74.27,
+          "pct_aranjiya": 25.73,
+          "mean_p_aranjiya": 0.2737
+        },
+        "maba3d_alayyam": {
+          "n": 1639,
+          "pct_fusha": 28.62,
+          "pct_aranjiya": 71.38,
+          "mean_p_aranjiya": 0.7015
+        }
+      },
+      "opus_test_per_corpus": {
+        "opus:OpenSubtitles": {
+          "n": 1000,
+          "pct_fusha": 4.0,
+          "pct_aranjiya": 96.0,
+          "mean_p_aranjiya": 0.9497
+        },
+        "opus:TED2020": {
+          "n": 1000,
+          "pct_fusha": 1.2,
+          "pct_aranjiya": 98.8,
+          "mean_p_aranjiya": 0.9808
+        },
+        "opus:News-Commentary": {
+          "n": 1000,
+          "pct_fusha": 0.0,
+          "pct_aranjiya": 100.0,
+          "mean_p_aranjiya": 0.9951
+        },
+        "opus:GlobalVoices": {
+          "n": 1000,
+          "pct_fusha": 1.4,
+          "pct_aranjiya": 98.6,
+          "mean_p_aranjiya": 0.9744
+        }
+      },
+      "regression_masking": {
+        "classical_pct_fusha_orig": 94.79,
+        "classical_pct_fusha_masked": 95.88,
+        "classical_flips_f2a": 0,
+        "classical_flip_rate_pct": 0.0,
+        "twins_pct_aranjiya_orig": 94.36,
+        "twins_pct_aranjiya_masked": 93.93,
+        "twins_flips_a2f": 2,
+        "twins_flip_rate_pct": 0.43
+      },
+      "regression_voice_on_nazarat_essays": {
+        "with_voice_words": {
+          "n": 242,
+          "pct_fusha": 88.02,
+          "pct_aranjiya": 11.98,
+          "mean_p_aranjiya": 0.1317
+        },
+        "without_voice_words": {
+          "n": 2833,
+          "pct_fusha": 92.13,
+          "pct_aranjiya": 7.87,
+          "mean_p_aranjiya": 0.0935
+        },
+        "pct_fusha_gap": 4.11
+      }
+    },
+    "seed_101": {
+      "clean_test": {
+        "n": 922,
+        "n_pairs": 461,
+        "acc": 94.58,
+        "classical_pct_fusha": 93.71,
+        "twin_pct_aranjiya": 95.44,
+        "pairwise_acc": 98.92,
+        "pairwise_ok": 456
+      },
+      "haiku_non_recalled_lt_045": {
+        "n": 472,
+        "n_pairs": 236,
+        "acc": 70.76,
+        "classical_pct_fusha": 96.19,
+        "twin_pct_aranjiya": 45.34,
+        "pairwise_acc": 89.83,
+        "pairwise_ok": 212,
+        "twin_p_quartiles": {
+          "q1": 0.0241,
+          "median": 0.3235,
+          "q3": 0.9639
+        }
+      },
+      "haiku_all_436": {
+        "n": 872,
+        "n_pairs": 436,
+        "acc": 66.97,
+        "classical_pct_fusha": 94.95,
+        "twin_pct_aranjiya": 38.99,
+        "pairwise_acc": 87.61,
+        "pairwise_ok": 382,
+        "twin_p_quartiles": {
+          "q1": 0.0183,
+          "median": 0.1939,
+          "q3": 0.918
+        }
+      },
+      "hard_test": {
+        "n": 83,
+        "n_pairs": 36,
+        "acc": 84.34,
+        "classical_pct_fusha": 69.44,
+        "twin_pct_aranjiya": 95.74,
+        "pairwise_acc": 100.0,
+        "pairwise_ok": 36
+      },
+      "calque_pairs": {
+        "contexts": {
+          "overall": {
+            "n": 38,
+            "correct": 38,
+            "pct": 100.0,
+            "mean_diff": 2.7001
+          },
+          "by_direction": {
+            "calque_inserted": {
+              "n": 16,
+              "correct": 16,
+              "pct": 100.0,
+              "mean_diff": 3.744
+            },
+            "original_is_calque": {
+              "n": 22,
+              "correct": 22,
+              "pct": 100.0,
+              "mean_diff": 1.941
+            }
+          },
+          "by_book": {
+            "hayati": {
+              "n": 26,
+              "correct": 26,
+              "pct": 100.0,
+              "mean_diff": 2.0582
+            },
+            "nazarat": {
+              "n": 12,
+              "correct": 12,
+              "pct": 100.0,
+              "mean_diff": 4.0909
+            }
+          },
+          "wrong_ids": [],
+          "wrong_pairs": []
+        },
+        "sentences": {
+          "overall": {
+            "n": 38,
+            "correct": 38,
+            "pct": 100.0,
+            "mean_diff": 4.6484
+          },
+          "by_direction": {
+            "calque_inserted": {
+              "n": 16,
+              "correct": 16,
+              "pct": 100.0,
+              "mean_diff": 5.2066
+            },
+            "original_is_calque": {
+              "n": 22,
+              "correct": 22,
+              "pct": 100.0,
+              "mean_diff": 4.2424
+            }
+          },
+          "by_book": {
+            "hayati": {
+              "n": 26,
+              "correct": 26,
+              "pct": 100.0,
+              "mean_diff": 4.4237
+            },
+            "nazarat": {
+              "n": 12,
+              "correct": 12,
+              "pct": 100.0,
+              "mean_diff": 5.1352
+            }
+          },
+          "wrong_ids": [],
+          "wrong_pairs": []
+        }
+      },
+      "modern_books": {
+        "nazarat_essays": {
+          "n": 3075,
+          "pct_fusha": 84.16,
+          "pct_aranjiya": 15.84,
+          "mean_p_aranjiya": 0.1768
+        },
+        "nazarat_adapted": {
+          "n": 376,
+          "pct_fusha": 60.9,
+          "pct_aranjiya": 39.1,
+          "mean_p_aranjiya": 0.4078
+        },
+        "hayati": {
+          "n": 1550,
+          "pct_fusha": 63.48,
+          "pct_aranjiya": 36.52,
+          "mean_p_aranjiya": 0.3794
+        },
+        "sabil_altaj": {
+          "n": 513,
+          "pct_fusha": 56.92,
+          "pct_aranjiya": 43.08,
+          "mean_p_aranjiya": 0.4297
+        },
+        "maba3d_alayyam": {
+          "n": 1639,
+          "pct_fusha": 22.03,
+          "pct_aranjiya": 77.97,
+          "mean_p_aranjiya": 0.7616
+        }
+      },
+      "opus_test_per_corpus": {
+        "opus:OpenSubtitles": {
+          "n": 1000,
+          "pct_fusha": 1.3,
+          "pct_aranjiya": 98.7,
+          "mean_p_aranjiya": 0.9734
+        },
+        "opus:TED2020": {
+          "n": 1000,
+          "pct_fusha": 0.5,
+          "pct_aranjiya": 99.5,
+          "mean_p_aranjiya": 0.9875
+        },
+        "opus:News-Commentary": {
+          "n": 1000,
+          "pct_fusha": 0.0,
+          "pct_aranjiya": 100.0,
+          "mean_p_aranjiya": 0.9944
+        },
+        "opus:GlobalVoices": {
+          "n": 1000,
+          "pct_fusha": 0.5,
+          "pct_aranjiya": 99.5,
+          "mean_p_aranjiya": 0.9843
+        }
+      },
+      "regression_masking": {
+        "classical_pct_fusha_orig": 93.71,
+        "classical_pct_fusha_masked": 94.36,
+        "classical_flips_f2a": 0,
+        "classical_flip_rate_pct": 0.0,
+        "twins_pct_aranjiya_orig": 95.44,
+        "twins_pct_aranjiya_masked": 95.23,
+        "twins_flips_a2f": 1,
+        "twins_flip_rate_pct": 0.22
+      },
+      "regression_voice_on_nazarat_essays": {
+        "with_voice_words": {
+          "n": 242,
+          "pct_fusha": 77.69,
+          "pct_aranjiya": 22.31,
+          "mean_p_aranjiya": 0.243
+        },
+        "without_voice_words": {
+          "n": 2833,
+          "pct_fusha": 84.72,
+          "pct_aranjiya": 15.28,
+          "mean_p_aranjiya": 0.1711
+        },
+        "pct_fusha_gap": 7.03
+      }
+    },
+    "seed_202": {
+      "clean_test": {
+        "n": 922,
+        "n_pairs": 461,
+        "acc": 94.58,
+        "classical_pct_fusha": 92.19,
+        "twin_pct_aranjiya": 96.96,
+        "pairwise_acc": 99.13,
+        "pairwise_ok": 457
+      },
+      "haiku_non_recalled_lt_045": {
+        "n": 472,
+        "n_pairs": 236,
+        "acc": 73.52,
+        "classical_pct_fusha": 94.92,
+        "twin_pct_aranjiya": 52.12,
+        "pairwise_acc": 90.68,
+        "pairwise_ok": 214,
+        "twin_p_quartiles": {
+          "q1": 0.1042,
+          "median": 0.5504,
+          "q3": 0.9545
+        }
+      },
+      "haiku_all_436": {
+        "n": 872,
+        "n_pairs": 436,
+        "acc": 68.92,
+        "classical_pct_fusha": 93.12,
+        "twin_pct_aranjiya": 44.72,
+        "pairwise_acc": 88.3,
+        "pairwise_ok": 385,
+        "twin_p_quartiles": {
+          "q1": 0.0894,
+          "median": 0.3731,
+          "q3": 0.9237
+        }
+      },
+      "hard_test": {
+        "n": 83,
+        "n_pairs": 36,
+        "acc": 80.72,
+        "classical_pct_fusha": 66.67,
+        "twin_pct_aranjiya": 91.49,
+        "pairwise_acc": 100.0,
+        "pairwise_ok": 36
+      },
+      "calque_pairs": {
+        "contexts": {
+          "overall": {
+            "n": 38,
+            "correct": 38,
+            "pct": 100.0,
+            "mean_diff": 1.9458
+          },
+          "by_direction": {
+            "calque_inserted": {
+              "n": 16,
+              "correct": 16,
+              "pct": 100.0,
+              "mean_diff": 2.7654
+            },
+            "original_is_calque": {
+              "n": 22,
+              "correct": 22,
+              "pct": 100.0,
+              "mean_diff": 1.3498
+            }
+          },
+          "by_book": {
+            "hayati": {
+              "n": 26,
+              "correct": 26,
+              "pct": 100.0,
+              "mean_diff": 1.485
+            },
+            "nazarat": {
+              "n": 12,
+              "correct": 12,
+              "pct": 100.0,
+              "mean_diff": 2.9442
+            }
+          },
+          "wrong_ids": [],
+          "wrong_pairs": []
+        },
+        "sentences": {
+          "overall": {
+            "n": 38,
+            "correct": 38,
+            "pct": 100.0,
+            "mean_diff": 3.2239
+          },
+          "by_direction": {
+            "calque_inserted": {
+              "n": 16,
+              "correct": 16,
+              "pct": 100.0,
+              "mean_diff": 3.7367
+            },
+            "original_is_calque": {
+              "n": 22,
+              "correct": 22,
+              "pct": 100.0,
+              "mean_diff": 2.851
+            }
+          },
+          "by_book": {
+            "hayati": {
+              "n": 26,
+              "correct": 26,
+              "pct": 100.0,
+              "mean_diff": 3.0688
+            },
+            "nazarat": {
+              "n": 12,
+              "correct": 12,
+              "pct": 100.0,
+              "mean_diff": 3.56
+            }
+          },
+          "wrong_ids": [],
+          "wrong_pairs": []
+        }
+      },
+      "modern_books": {
+        "nazarat_essays": {
+          "n": 3075,
+          "pct_fusha": 81.76,
+          "pct_aranjiya": 18.24,
+          "mean_p_aranjiya": 0.2333
+        },
+        "nazarat_adapted": {
+          "n": 376,
+          "pct_fusha": 52.39,
+          "pct_aranjiya": 47.61,
+          "mean_p_aranjiya": 0.4683
+        },
+        "hayati": {
+          "n": 1550,
+          "pct_fusha": 66.84,
+          "pct_aranjiya": 33.16,
+          "mean_p_aranjiya": 0.366
+        },
+        "sabil_altaj": {
+          "n": 513,
+          "pct_fusha": 51.27,
+          "pct_aranjiya": 48.73,
+          "mean_p_aranjiya": 0.4879
+        },
+        "maba3d_alayyam": {
+          "n": 1639,
+          "pct_fusha": 19.52,
+          "pct_aranjiya": 80.48,
+          "mean_p_aranjiya": 0.7772
+        }
+      },
+      "opus_test_per_corpus": {
+        "opus:OpenSubtitles": {
+          "n": 1000,
+          "pct_fusha": 1.1,
+          "pct_aranjiya": 98.9,
+          "mean_p_aranjiya": 0.9753
+        },
+        "opus:TED2020": {
+          "n": 1000,
+          "pct_fusha": 0.5,
+          "pct_aranjiya": 99.5,
+          "mean_p_aranjiya": 0.9853
+        },
+        "opus:News-Commentary": {
+          "n": 1000,
+          "pct_fusha": 0.0,
+          "pct_aranjiya": 100.0,
+          "mean_p_aranjiya": 0.991
+        },
+        "opus:GlobalVoices": {
+          "n": 1000,
+          "pct_fusha": 1.0,
+          "pct_aranjiya": 99.0,
+          "mean_p_aranjiya": 0.9753
+        }
+      },
+      "regression_masking": {
+        "classical_pct_fusha_orig": 92.19,
+        "classical_pct_fusha_masked": 93.28,
+        "classical_flips_f2a": 0,
+        "classical_flip_rate_pct": 0.0,
+        "twins_pct_aranjiya_orig": 96.96,
+        "twins_pct_aranjiya_masked": 96.96,
+        "twins_flips_a2f": 0,
+        "twins_flip_rate_pct": 0.0
+      },
+      "regression_voice_on_nazarat_essays": {
+        "with_voice_words": {
+          "n": 242,
+          "pct_fusha": 73.14,
+          "pct_aranjiya": 26.86,
+          "mean_p_aranjiya": 0.303
+        },
+        "without_voice_words": {
+          "n": 2833,
+          "pct_fusha": 82.49,
+          "pct_aranjiya": 17.51,
+          "mean_p_aranjiya": 0.2273
+        },
+        "pct_fusha_gap": 9.35
+      }
+    }
+  },
+  "three_seed_summary": {
+    "clean_test": {
+      "n": {
+        "mean": 922.0,
+        "min": 922.0,
+        "max": 922.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 922.0,
+          "seed_101": 922.0,
+          "seed_202": 922.0
+        }
+      },
+      "n_pairs": {
+        "mean": 461.0,
+        "min": 461.0,
+        "max": 461.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 461.0,
+          "seed_101": 461.0,
+          "seed_202": 461.0
+        }
+      },
+      "acc": {
+        "mean": 94.58,
+        "min": 94.58,
+        "max": 94.58,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 94.58,
+          "seed_101": 94.58,
+          "seed_202": 94.58
+        }
+      },
+      "classical_pct_fusha": {
+        "mean": 93.56,
+        "min": 92.19,
+        "max": 94.79,
+        "spread": 2.6,
+        "per_seed": {
+          "seed_42": 94.79,
+          "seed_101": 93.71,
+          "seed_202": 92.19
+        }
+      },
+      "twin_pct_aranjiya": {
+        "mean": 95.59,
+        "min": 94.36,
+        "max": 96.96,
+        "spread": 2.6,
+        "per_seed": {
+          "seed_42": 94.36,
+          "seed_101": 95.44,
+          "seed_202": 96.96
+        }
+      },
+      "pairwise_acc": {
+        "mean": 98.92,
+        "min": 98.7,
+        "max": 99.13,
+        "spread": 0.43,
+        "per_seed": {
+          "seed_42": 98.7,
+          "seed_101": 98.92,
+          "seed_202": 99.13
+        }
+      },
+      "pairwise_ok": {
+        "mean": 456.0,
+        "min": 455.0,
+        "max": 457.0,
+        "spread": 2.0,
+        "per_seed": {
+          "seed_42": 455.0,
+          "seed_101": 456.0,
+          "seed_202": 457.0
+        }
+      }
+    },
+    "haiku_non_recalled_lt_045": {
+      "n": {
+        "mean": 472.0,
+        "min": 472.0,
+        "max": 472.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 472.0,
+          "seed_101": 472.0,
+          "seed_202": 472.0
+        }
+      },
+      "n_pairs": {
+        "mean": 236.0,
+        "min": 236.0,
+        "max": 236.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 236.0,
+          "seed_101": 236.0,
+          "seed_202": 236.0
+        }
+      },
+      "acc": {
+        "mean": 70.34,
+        "min": 66.74,
+        "max": 73.52,
+        "spread": 6.78,
+        "per_seed": {
+          "seed_42": 66.74,
+          "seed_101": 70.76,
+          "seed_202": 73.52
+        }
+      },
+      "classical_pct_fusha": {
+        "mean": 96.33,
+        "min": 94.92,
+        "max": 97.88,
+        "spread": 2.96,
+        "per_seed": {
+          "seed_42": 97.88,
+          "seed_101": 96.19,
+          "seed_202": 94.92
+        }
+      },
+      "twin_pct_aranjiya": {
+        "mean": 44.35,
+        "min": 35.59,
+        "max": 52.12,
+        "spread": 16.53,
+        "per_seed": {
+          "seed_42": 35.59,
+          "seed_101": 45.34,
+          "seed_202": 52.12
+        }
+      },
+      "pairwise_acc": {
+        "mean": 90.82,
+        "min": 89.83,
+        "max": 91.95,
+        "spread": 2.12,
+        "per_seed": {
+          "seed_42": 91.95,
+          "seed_101": 89.83,
+          "seed_202": 90.68
+        }
+      },
+      "pairwise_ok": {
+        "mean": 214.33,
+        "min": 212.0,
+        "max": 217.0,
+        "spread": 5.0,
+        "per_seed": {
+          "seed_42": 217.0,
+          "seed_101": 212.0,
+          "seed_202": 214.0
+        }
+      },
+      "twin_p_quartiles": {
+        "q1": {
+          "mean": 0.04,
+          "min": 0.01,
+          "max": 0.1,
+          "spread": 0.1,
+          "per_seed": {
+            "seed_42": 0.0064,
+            "seed_101": 0.0241,
+            "seed_202": 0.1042
+          }
+        },
+        "median": {
+          "mean": 0.33,
+          "min": 0.13,
+          "max": 0.55,
+          "spread": 0.42,
+          "per_seed": {
+            "seed_42": 0.1307,
+            "seed_101": 0.3235,
+            "seed_202": 0.5504
+          }
+        },
+        "q3": {
+          "mean": 0.93,
+          "min": 0.86,
+          "max": 0.96,
+          "spread": 0.1,
+          "per_seed": {
+            "seed_42": 0.863,
+            "seed_101": 0.9639,
+            "seed_202": 0.9545
+          }
+        }
+      }
+    },
+    "haiku_all_436": {
+      "n": {
+        "mean": 872.0,
+        "min": 872.0,
+        "max": 872.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 872.0,
+          "seed_101": 872.0,
+          "seed_202": 872.0
+        }
+      },
+      "n_pairs": {
+        "mean": 436.0,
+        "min": 436.0,
+        "max": 436.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 436.0,
+          "seed_101": 436.0,
+          "seed_202": 436.0
+        }
+      },
+      "acc": {
+        "mean": 66.63,
+        "min": 63.99,
+        "max": 68.92,
+        "spread": 4.93,
+        "per_seed": {
+          "seed_42": 63.99,
+          "seed_101": 66.97,
+          "seed_202": 68.92
+        }
+      },
+      "classical_pct_fusha": {
+        "mean": 94.88,
+        "min": 93.12,
+        "max": 96.56,
+        "spread": 3.44,
+        "per_seed": {
+          "seed_42": 96.56,
+          "seed_101": 94.95,
+          "seed_202": 93.12
+        }
+      },
+      "twin_pct_aranjiya": {
+        "mean": 38.38,
+        "min": 31.42,
+        "max": 44.72,
+        "spread": 13.3,
+        "per_seed": {
+          "seed_42": 31.42,
+          "seed_101": 38.99,
+          "seed_202": 44.72
+        }
+      },
+      "pairwise_acc": {
+        "mean": 88.3,
+        "min": 87.61,
+        "max": 88.99,
+        "spread": 1.38,
+        "per_seed": {
+          "seed_42": 88.99,
+          "seed_101": 87.61,
+          "seed_202": 88.3
+        }
+      },
+      "pairwise_ok": {
+        "mean": 385.0,
+        "min": 382.0,
+        "max": 388.0,
+        "spread": 6.0,
+        "per_seed": {
+          "seed_42": 388.0,
+          "seed_101": 382.0,
+          "seed_202": 385.0
+        }
+      },
+      "twin_p_quartiles": {
+        "q1": {
+          "mean": 0.04,
+          "min": 0.01,
+          "max": 0.09,
+          "spread": 0.08,
+          "per_seed": {
+            "seed_42": 0.0065,
+            "seed_101": 0.0183,
+            "seed_202": 0.0894
+          }
+        },
+        "median": {
+          "mean": 0.21,
+          "min": 0.06,
+          "max": 0.37,
+          "spread": 0.32,
+          "per_seed": {
+            "seed_42": 0.0574,
+            "seed_101": 0.1939,
+            "seed_202": 0.3731
+          }
+        },
+        "q3": {
+          "mean": 0.86,
+          "min": 0.74,
+          "max": 0.92,
+          "spread": 0.18,
+          "per_seed": {
+            "seed_42": 0.7443,
+            "seed_101": 0.918,
+            "seed_202": 0.9237
+          }
+        }
+      }
+    },
+    "hard_test": {
+      "n": {
+        "mean": 83.0,
+        "min": 83.0,
+        "max": 83.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 83.0,
+          "seed_101": 83.0,
+          "seed_202": 83.0
+        }
+      },
+      "n_pairs": {
+        "mean": 36.0,
+        "min": 36.0,
+        "max": 36.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 36.0,
+          "seed_101": 36.0,
+          "seed_202": 36.0
+        }
+      },
+      "acc": {
+        "mean": 83.94,
+        "min": 80.72,
+        "max": 86.75,
+        "spread": 6.03,
+        "per_seed": {
+          "seed_42": 86.75,
+          "seed_101": 84.34,
+          "seed_202": 80.72
+        }
+      },
+      "classical_pct_fusha": {
+        "mean": 75.93,
+        "min": 66.67,
+        "max": 91.67,
+        "spread": 25.0,
+        "per_seed": {
+          "seed_42": 91.67,
+          "seed_101": 69.44,
+          "seed_202": 66.67
+        }
+      },
+      "twin_pct_aranjiya": {
+        "mean": 90.07,
+        "min": 82.98,
+        "max": 95.74,
+        "spread": 12.76,
+        "per_seed": {
+          "seed_42": 82.98,
+          "seed_101": 95.74,
+          "seed_202": 91.49
+        }
+      },
+      "pairwise_acc": {
+        "mean": 99.07,
+        "min": 97.22,
+        "max": 100.0,
+        "spread": 2.78,
+        "per_seed": {
+          "seed_42": 97.22,
+          "seed_101": 100.0,
+          "seed_202": 100.0
+        }
+      },
+      "pairwise_ok": {
+        "mean": 35.67,
+        "min": 35.0,
+        "max": 36.0,
+        "spread": 1.0,
+        "per_seed": {
+          "seed_42": 35.0,
+          "seed_101": 36.0,
+          "seed_202": 36.0
+        }
+      }
+    },
+    "calque_pairs": {
+      "contexts": {
+        "overall": {
+          "n": {
+            "mean": 38.0,
+            "min": 38.0,
+            "max": 38.0,
+            "spread": 0.0,
+            "per_seed": {
+              "seed_42": 38.0,
+              "seed_101": 38.0,
+              "seed_202": 38.0
+            }
+          },
+          "correct": {
+            "mean": 37.33,
+            "min": 36.0,
+            "max": 38.0,
+            "spread": 2.0,
+            "per_seed": {
+              "seed_42": 36.0,
+              "seed_101": 38.0,
+              "seed_202": 38.0
+            }
+          },
+          "pct": {
+            "mean": 98.25,
+            "min": 94.74,
+            "max": 100.0,
+            "spread": 5.26,
+            "per_seed": {
+              "seed_42": 94.74,
+              "seed_101": 100.0,
+              "seed_202": 100.0
+            }
+          },
+          "mean_diff": {
+            "mean": 2.38,
+            "min": 1.95,
+            "max": 2.7,
+            "spread": 0.75,
+            "per_seed": {
+              "seed_42": 2.4856,
+              "seed_101": 2.7001,
+              "seed_202": 1.9458
+            }
+          }
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": {
+              "mean": 16.0,
+              "min": 16.0,
+              "max": 16.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 16.0,
+                "seed_101": 16.0,
+                "seed_202": 16.0
+              }
+            },
+            "correct": {
+              "mean": 15.67,
+              "min": 15.0,
+              "max": 16.0,
+              "spread": 1.0,
+              "per_seed": {
+                "seed_42": 15.0,
+                "seed_101": 16.0,
+                "seed_202": 16.0
+              }
+            },
+            "pct": {
+              "mean": 97.92,
+              "min": 93.75,
+              "max": 100.0,
+              "spread": 6.25,
+              "per_seed": {
+                "seed_42": 93.75,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 3.35,
+              "min": 2.77,
+              "max": 3.74,
+              "spread": 0.98,
+              "per_seed": {
+                "seed_42": 3.5544,
+                "seed_101": 3.744,
+                "seed_202": 2.7654
+              }
+            }
+          },
+          "original_is_calque": {
+            "n": {
+              "mean": 22.0,
+              "min": 22.0,
+              "max": 22.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 22.0,
+                "seed_101": 22.0,
+                "seed_202": 22.0
+              }
+            },
+            "correct": {
+              "mean": 21.67,
+              "min": 21.0,
+              "max": 22.0,
+              "spread": 1.0,
+              "per_seed": {
+                "seed_42": 21.0,
+                "seed_101": 22.0,
+                "seed_202": 22.0
+              }
+            },
+            "pct": {
+              "mean": 98.48,
+              "min": 95.45,
+              "max": 100.0,
+              "spread": 4.55,
+              "per_seed": {
+                "seed_42": 95.45,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 1.67,
+              "min": 1.35,
+              "max": 1.94,
+              "spread": 0.59,
+              "per_seed": {
+                "seed_42": 1.7083,
+                "seed_101": 1.941,
+                "seed_202": 1.3498
+              }
+            }
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": {
+              "mean": 26.0,
+              "min": 26.0,
+              "max": 26.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 26.0,
+                "seed_101": 26.0,
+                "seed_202": 26.0
+              }
+            },
+            "correct": {
+              "mean": 25.67,
+              "min": 25.0,
+              "max": 26.0,
+              "spread": 1.0,
+              "per_seed": {
+                "seed_42": 25.0,
+                "seed_101": 26.0,
+                "seed_202": 26.0
+              }
+            },
+            "pct": {
+              "mean": 98.72,
+              "min": 96.15,
+              "max": 100.0,
+              "spread": 3.85,
+              "per_seed": {
+                "seed_42": 96.15,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 1.81,
+              "min": 1.49,
+              "max": 2.06,
+              "spread": 0.57,
+              "per_seed": {
+                "seed_42": 1.887,
+                "seed_101": 2.0582,
+                "seed_202": 1.485
+              }
+            }
+          },
+          "nazarat": {
+            "n": {
+              "mean": 12.0,
+              "min": 12.0,
+              "max": 12.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 12.0,
+                "seed_101": 12.0,
+                "seed_202": 12.0
+              }
+            },
+            "correct": {
+              "mean": 11.67,
+              "min": 11.0,
+              "max": 12.0,
+              "spread": 1.0,
+              "per_seed": {
+                "seed_42": 11.0,
+                "seed_101": 12.0,
+                "seed_202": 12.0
+              }
+            },
+            "pct": {
+              "mean": 97.22,
+              "min": 91.67,
+              "max": 100.0,
+              "spread": 8.33,
+              "per_seed": {
+                "seed_42": 91.67,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 3.61,
+              "min": 2.94,
+              "max": 4.09,
+              "spread": 1.15,
+              "per_seed": {
+                "seed_42": 3.7826,
+                "seed_101": 4.0909,
+                "seed_202": 2.9442
+              }
+            }
+          }
+        }
+      },
+      "sentences": {
+        "overall": {
+          "n": {
+            "mean": 38.0,
+            "min": 38.0,
+            "max": 38.0,
+            "spread": 0.0,
+            "per_seed": {
+              "seed_42": 38.0,
+              "seed_101": 38.0,
+              "seed_202": 38.0
+            }
+          },
+          "correct": {
+            "mean": 38.0,
+            "min": 38.0,
+            "max": 38.0,
+            "spread": 0.0,
+            "per_seed": {
+              "seed_42": 38.0,
+              "seed_101": 38.0,
+              "seed_202": 38.0
+            }
+          },
+          "pct": {
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0,
+            "spread": 0.0,
+            "per_seed": {
+              "seed_42": 100.0,
+              "seed_101": 100.0,
+              "seed_202": 100.0
+            }
+          },
+          "mean_diff": {
+            "mean": 4.13,
+            "min": 3.22,
+            "max": 4.65,
+            "spread": 1.42,
+            "per_seed": {
+              "seed_42": 4.5232,
+              "seed_101": 4.6484,
+              "seed_202": 3.2239
+            }
+          }
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": {
+              "mean": 16.0,
+              "min": 16.0,
+              "max": 16.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 16.0,
+                "seed_101": 16.0,
+                "seed_202": 16.0
+              }
+            },
+            "correct": {
+              "mean": 16.0,
+              "min": 16.0,
+              "max": 16.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 16.0,
+                "seed_101": 16.0,
+                "seed_202": 16.0
+              }
+            },
+            "pct": {
+              "mean": 100.0,
+              "min": 100.0,
+              "max": 100.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 100.0,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 4.96,
+              "min": 3.74,
+              "max": 5.95,
+              "spread": 2.21,
+              "per_seed": {
+                "seed_42": 5.9457,
+                "seed_101": 5.2066,
+                "seed_202": 3.7367
+              }
+            }
+          },
+          "original_is_calque": {
+            "n": {
+              "mean": 22.0,
+              "min": 22.0,
+              "max": 22.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 22.0,
+                "seed_101": 22.0,
+                "seed_202": 22.0
+              }
+            },
+            "correct": {
+              "mean": 22.0,
+              "min": 22.0,
+              "max": 22.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 22.0,
+                "seed_101": 22.0,
+                "seed_202": 22.0
+              }
+            },
+            "pct": {
+              "mean": 100.0,
+              "min": 100.0,
+              "max": 100.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 100.0,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 3.53,
+              "min": 2.85,
+              "max": 4.24,
+              "spread": 1.39,
+              "per_seed": {
+                "seed_42": 3.4886,
+                "seed_101": 4.2424,
+                "seed_202": 2.851
+              }
+            }
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": {
+              "mean": 26.0,
+              "min": 26.0,
+              "max": 26.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 26.0,
+                "seed_101": 26.0,
+                "seed_202": 26.0
+              }
+            },
+            "correct": {
+              "mean": 26.0,
+              "min": 26.0,
+              "max": 26.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 26.0,
+                "seed_101": 26.0,
+                "seed_202": 26.0
+              }
+            },
+            "pct": {
+              "mean": 100.0,
+              "min": 100.0,
+              "max": 100.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 100.0,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 3.83,
+              "min": 3.07,
+              "max": 4.42,
+              "spread": 1.35,
+              "per_seed": {
+                "seed_42": 3.9949,
+                "seed_101": 4.4237,
+                "seed_202": 3.0688
+              }
+            }
+          },
+          "nazarat": {
+            "n": {
+              "mean": 12.0,
+              "min": 12.0,
+              "max": 12.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 12.0,
+                "seed_101": 12.0,
+                "seed_202": 12.0
+              }
+            },
+            "correct": {
+              "mean": 12.0,
+              "min": 12.0,
+              "max": 12.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 12.0,
+                "seed_101": 12.0,
+                "seed_202": 12.0
+              }
+            },
+            "pct": {
+              "mean": 100.0,
+              "min": 100.0,
+              "max": 100.0,
+              "spread": 0.0,
+              "per_seed": {
+                "seed_42": 100.0,
+                "seed_101": 100.0,
+                "seed_202": 100.0
+              }
+            },
+            "mean_diff": {
+              "mean": 4.79,
+              "min": 3.56,
+              "max": 5.67,
+              "spread": 2.11,
+              "per_seed": {
+                "seed_42": 5.6678,
+                "seed_101": 5.1352,
+                "seed_202": 3.56
+              }
+            }
+          }
+        }
+      }
+    },
+    "modern_books": {
+      "nazarat_essays": {
+        "n": {
+          "mean": 3075.0,
+          "min": 3075.0,
+          "max": 3075.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 3075.0,
+            "seed_101": 3075.0,
+            "seed_202": 3075.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 85.91,
+          "min": 81.76,
+          "max": 91.8,
+          "spread": 10.04,
+          "per_seed": {
+            "seed_42": 91.8,
+            "seed_101": 84.16,
+            "seed_202": 81.76
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 14.09,
+          "min": 8.2,
+          "max": 18.24,
+          "spread": 10.04,
+          "per_seed": {
+            "seed_42": 8.2,
+            "seed_101": 15.84,
+            "seed_202": 18.24
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.17,
+          "min": 0.1,
+          "max": 0.23,
+          "spread": 0.14,
+          "per_seed": {
+            "seed_42": 0.0965,
+            "seed_101": 0.1768,
+            "seed_202": 0.2333
+          }
+        }
+      },
+      "nazarat_adapted": {
+        "n": {
+          "mean": 376.0,
+          "min": 376.0,
+          "max": 376.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 376.0,
+            "seed_101": 376.0,
+            "seed_202": 376.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 65.07,
+          "min": 52.39,
+          "max": 81.91,
+          "spread": 29.52,
+          "per_seed": {
+            "seed_42": 81.91,
+            "seed_101": 60.9,
+            "seed_202": 52.39
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 34.93,
+          "min": 18.09,
+          "max": 47.61,
+          "spread": 29.52,
+          "per_seed": {
+            "seed_42": 18.09,
+            "seed_101": 39.1,
+            "seed_202": 47.61
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.36,
+          "min": 0.21,
+          "max": 0.47,
+          "spread": 0.26,
+          "per_seed": {
+            "seed_42": 0.2051,
+            "seed_101": 0.4078,
+            "seed_202": 0.4683
+          }
+        }
+      },
+      "hayati": {
+        "n": {
+          "mean": 1550.0,
+          "min": 1550.0,
+          "max": 1550.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 1550.0,
+            "seed_101": 1550.0,
+            "seed_202": 1550.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 69.81,
+          "min": 63.48,
+          "max": 79.1,
+          "spread": 15.62,
+          "per_seed": {
+            "seed_42": 79.1,
+            "seed_101": 63.48,
+            "seed_202": 66.84
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 30.19,
+          "min": 20.9,
+          "max": 36.52,
+          "spread": 15.62,
+          "per_seed": {
+            "seed_42": 20.9,
+            "seed_101": 36.52,
+            "seed_202": 33.16
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.33,
+          "min": 0.23,
+          "max": 0.38,
+          "spread": 0.15,
+          "per_seed": {
+            "seed_42": 0.2334,
+            "seed_101": 0.3794,
+            "seed_202": 0.366
+          }
+        }
+      },
+      "sabil_altaj": {
+        "n": {
+          "mean": 513.0,
+          "min": 513.0,
+          "max": 513.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 513.0,
+            "seed_101": 513.0,
+            "seed_202": 513.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 60.82,
+          "min": 51.27,
+          "max": 74.27,
+          "spread": 23.0,
+          "per_seed": {
+            "seed_42": 74.27,
+            "seed_101": 56.92,
+            "seed_202": 51.27
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 39.18,
+          "min": 25.73,
+          "max": 48.73,
+          "spread": 23.0,
+          "per_seed": {
+            "seed_42": 25.73,
+            "seed_101": 43.08,
+            "seed_202": 48.73
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.4,
+          "min": 0.27,
+          "max": 0.49,
+          "spread": 0.21,
+          "per_seed": {
+            "seed_42": 0.2737,
+            "seed_101": 0.4297,
+            "seed_202": 0.4879
+          }
+        }
+      },
+      "maba3d_alayyam": {
+        "n": {
+          "mean": 1639.0,
+          "min": 1639.0,
+          "max": 1639.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 1639.0,
+            "seed_101": 1639.0,
+            "seed_202": 1639.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 23.39,
+          "min": 19.52,
+          "max": 28.62,
+          "spread": 9.1,
+          "per_seed": {
+            "seed_42": 28.62,
+            "seed_101": 22.03,
+            "seed_202": 19.52
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 76.61,
+          "min": 71.38,
+          "max": 80.48,
+          "spread": 9.1,
+          "per_seed": {
+            "seed_42": 71.38,
+            "seed_101": 77.97,
+            "seed_202": 80.48
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.75,
+          "min": 0.7,
+          "max": 0.78,
+          "spread": 0.08,
+          "per_seed": {
+            "seed_42": 0.7015,
+            "seed_101": 0.7616,
+            "seed_202": 0.7772
+          }
+        }
+      }
+    },
+    "opus_test_per_corpus": {
+      "opus:OpenSubtitles": {
+        "n": {
+          "mean": 1000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 1000.0,
+            "seed_101": 1000.0,
+            "seed_202": 1000.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 2.13,
+          "min": 1.1,
+          "max": 4.0,
+          "spread": 2.9,
+          "per_seed": {
+            "seed_42": 4.0,
+            "seed_101": 1.3,
+            "seed_202": 1.1
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 97.87,
+          "min": 96.0,
+          "max": 98.9,
+          "spread": 2.9,
+          "per_seed": {
+            "seed_42": 96.0,
+            "seed_101": 98.7,
+            "seed_202": 98.9
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.97,
+          "min": 0.95,
+          "max": 0.98,
+          "spread": 0.03,
+          "per_seed": {
+            "seed_42": 0.9497,
+            "seed_101": 0.9734,
+            "seed_202": 0.9753
+          }
+        }
+      },
+      "opus:TED2020": {
+        "n": {
+          "mean": 1000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 1000.0,
+            "seed_101": 1000.0,
+            "seed_202": 1000.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 0.73,
+          "min": 0.5,
+          "max": 1.2,
+          "spread": 0.7,
+          "per_seed": {
+            "seed_42": 1.2,
+            "seed_101": 0.5,
+            "seed_202": 0.5
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 99.27,
+          "min": 98.8,
+          "max": 99.5,
+          "spread": 0.7,
+          "per_seed": {
+            "seed_42": 98.8,
+            "seed_101": 99.5,
+            "seed_202": 99.5
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.98,
+          "min": 0.98,
+          "max": 0.99,
+          "spread": 0.01,
+          "per_seed": {
+            "seed_42": 0.9808,
+            "seed_101": 0.9875,
+            "seed_202": 0.9853
+          }
+        }
+      },
+      "opus:News-Commentary": {
+        "n": {
+          "mean": 1000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 1000.0,
+            "seed_101": 1000.0,
+            "seed_202": 1000.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 0.0,
+            "seed_101": 0.0,
+            "seed_202": 0.0
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 100.0,
+          "min": 100.0,
+          "max": 100.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 100.0,
+            "seed_101": 100.0,
+            "seed_202": 100.0
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.99,
+          "min": 0.99,
+          "max": 1.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 0.9951,
+            "seed_101": 0.9944,
+            "seed_202": 0.991
+          }
+        }
+      },
+      "opus:GlobalVoices": {
+        "n": {
+          "mean": 1000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 1000.0,
+            "seed_101": 1000.0,
+            "seed_202": 1000.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 0.97,
+          "min": 0.5,
+          "max": 1.4,
+          "spread": 0.9,
+          "per_seed": {
+            "seed_42": 1.4,
+            "seed_101": 0.5,
+            "seed_202": 1.0
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 99.03,
+          "min": 98.6,
+          "max": 99.5,
+          "spread": 0.9,
+          "per_seed": {
+            "seed_42": 98.6,
+            "seed_101": 99.5,
+            "seed_202": 99.0
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.98,
+          "min": 0.97,
+          "max": 0.98,
+          "spread": 0.01,
+          "per_seed": {
+            "seed_42": 0.9744,
+            "seed_101": 0.9843,
+            "seed_202": 0.9753
+          }
+        }
+      }
+    },
+    "regression_masking": {
+      "classical_pct_fusha_orig": {
+        "mean": 93.56,
+        "min": 92.19,
+        "max": 94.79,
+        "spread": 2.6,
+        "per_seed": {
+          "seed_42": 94.79,
+          "seed_101": 93.71,
+          "seed_202": 92.19
+        }
+      },
+      "classical_pct_fusha_masked": {
+        "mean": 94.51,
+        "min": 93.28,
+        "max": 95.88,
+        "spread": 2.6,
+        "per_seed": {
+          "seed_42": 95.88,
+          "seed_101": 94.36,
+          "seed_202": 93.28
+        }
+      },
+      "classical_flips_f2a": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 0.0,
+          "seed_101": 0.0,
+          "seed_202": 0.0
+        }
+      },
+      "classical_flip_rate_pct": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "spread": 0.0,
+        "per_seed": {
+          "seed_42": 0.0,
+          "seed_101": 0.0,
+          "seed_202": 0.0
+        }
+      },
+      "twins_pct_aranjiya_orig": {
+        "mean": 95.59,
+        "min": 94.36,
+        "max": 96.96,
+        "spread": 2.6,
+        "per_seed": {
+          "seed_42": 94.36,
+          "seed_101": 95.44,
+          "seed_202": 96.96
+        }
+      },
+      "twins_pct_aranjiya_masked": {
+        "mean": 95.37,
+        "min": 93.93,
+        "max": 96.96,
+        "spread": 3.03,
+        "per_seed": {
+          "seed_42": 93.93,
+          "seed_101": 95.23,
+          "seed_202": 96.96
+        }
+      },
+      "twins_flips_a2f": {
+        "mean": 1.0,
+        "min": 0.0,
+        "max": 2.0,
+        "spread": 2.0,
+        "per_seed": {
+          "seed_42": 2.0,
+          "seed_101": 1.0,
+          "seed_202": 0.0
+        }
+      },
+      "twins_flip_rate_pct": {
+        "mean": 0.22,
+        "min": 0.0,
+        "max": 0.43,
+        "spread": 0.43,
+        "per_seed": {
+          "seed_42": 0.43,
+          "seed_101": 0.22,
+          "seed_202": 0.0
+        }
+      }
+    },
+    "regression_voice_on_nazarat_essays": {
+      "with_voice_words": {
+        "n": {
+          "mean": 242.0,
+          "min": 242.0,
+          "max": 242.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 242.0,
+            "seed_101": 242.0,
+            "seed_202": 242.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 79.62,
+          "min": 73.14,
+          "max": 88.02,
+          "spread": 14.88,
+          "per_seed": {
+            "seed_42": 88.02,
+            "seed_101": 77.69,
+            "seed_202": 73.14
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 20.38,
+          "min": 11.98,
+          "max": 26.86,
+          "spread": 14.88,
+          "per_seed": {
+            "seed_42": 11.98,
+            "seed_101": 22.31,
+            "seed_202": 26.86
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.23,
+          "min": 0.13,
+          "max": 0.3,
+          "spread": 0.17,
+          "per_seed": {
+            "seed_42": 0.1317,
+            "seed_101": 0.243,
+            "seed_202": 0.303
+          }
+        }
+      },
+      "without_voice_words": {
+        "n": {
+          "mean": 2833.0,
+          "min": 2833.0,
+          "max": 2833.0,
+          "spread": 0.0,
+          "per_seed": {
+            "seed_42": 2833.0,
+            "seed_101": 2833.0,
+            "seed_202": 2833.0
+          }
+        },
+        "pct_fusha": {
+          "mean": 86.45,
+          "min": 82.49,
+          "max": 92.13,
+          "spread": 9.64,
+          "per_seed": {
+            "seed_42": 92.13,
+            "seed_101": 84.72,
+            "seed_202": 82.49
+          }
+        },
+        "pct_aranjiya": {
+          "mean": 13.55,
+          "min": 7.87,
+          "max": 17.51,
+          "spread": 9.64,
+          "per_seed": {
+            "seed_42": 7.87,
+            "seed_101": 15.28,
+            "seed_202": 17.51
+          }
+        },
+        "mean_p_aranjiya": {
+          "mean": 0.16,
+          "min": 0.09,
+          "max": 0.23,
+          "spread": 0.13,
+          "per_seed": {
+            "seed_42": 0.0935,
+            "seed_101": 0.1711,
+            "seed_202": 0.2273
+          }
+        }
+      },
+      "pct_fusha_gap": {
+        "mean": 6.83,
+        "min": 4.11,
+        "max": 9.35,
+        "spread": 5.24,
+        "per_seed": {
+          "seed_42": 4.11,
+          "seed_101": 7.03,
+          "seed_202": 9.35
+        }
+      }
+    }
+  },
+  "ensemble_3seed_avg_p": {
+    "clean_test": {
+      "n": 922,
+      "n_pairs": 461,
+      "acc": 95.01,
+      "classical_pct_fusha": 94.36,
+      "twin_pct_aranjiya": 95.66,
+      "pairwise_acc": 99.13,
+      "pairwise_ok": 457
+    },
+    "haiku_non_recalled_lt_045": {
+      "n": 472,
+      "n_pairs": 236,
+      "acc": 72.03,
+      "classical_pct_fusha": 97.88,
+      "twin_pct_aranjiya": 46.19,
+      "pairwise_acc": 90.68,
+      "pairwise_ok": 214,
+      "twin_p_quartiles": {
+        "q1": 0.0612,
+        "median": 0.382,
+        "q3": 0.8531
+      }
+    },
+    "haiku_all_436": {
+      "n": 872,
+      "n_pairs": 436,
+      "acc": 67.09,
+      "classical_pct_fusha": 95.64,
+      "twin_pct_aranjiya": 38.53,
+      "pairwise_acc": 88.3,
+      "pairwise_ok": 385,
+      "twin_p_quartiles": {
+        "q1": 0.0453,
+        "median": 0.2543,
+        "q3": 0.7451
+      }
+    },
+    "hard_test": {
+      "n": 83,
+      "n_pairs": 36,
+      "acc": 86.75,
+      "classical_pct_fusha": 77.78,
+      "twin_pct_aranjiya": 93.62,
+      "pairwise_acc": 100.0,
+      "pairwise_ok": 36
+    },
+    "calque_pairs": {
+      "contexts": {
+        "overall": {
+          "n": 38,
+          "correct": 38,
+          "pct": 100.0,
+          "mean_diff": 0.2468
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": 16,
+            "correct": 16,
+            "pct": 100.0,
+            "mean_diff": 0.3258
+          },
+          "original_is_calque": {
+            "n": 22,
+            "correct": 22,
+            "pct": 100.0,
+            "mean_diff": 0.1893
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": 26,
+            "correct": 26,
+            "pct": 100.0,
+            "mean_diff": 0.1983
+          },
+          "nazarat": {
+            "n": 12,
+            "correct": 12,
+            "pct": 100.0,
+            "mean_diff": 0.3518
+          }
+        },
+        "wrong_ids": [],
+        "wrong_pairs": []
+      },
+      "sentences": {
+        "overall": {
+          "n": 38,
+          "correct": 38,
+          "pct": 100.0,
+          "mean_diff": 0.4811
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": 16,
+            "correct": 16,
+            "pct": 100.0,
+            "mean_diff": 0.5387
+          },
+          "original_is_calque": {
+            "n": 22,
+            "correct": 22,
+            "pct": 100.0,
+            "mean_diff": 0.4392
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": 26,
+            "correct": 26,
+            "pct": 100.0,
+            "mean_diff": 0.4596
+          },
+          "nazarat": {
+            "n": 12,
+            "correct": 12,
+            "pct": 100.0,
+            "mean_diff": 0.5277
+          }
+        },
+        "wrong_ids": [],
+        "wrong_pairs": []
+      }
+    },
+    "modern_books": {
+      "nazarat_essays": {
+        "n": 3075,
+        "pct_fusha": 87.74,
+        "pct_aranjiya": 12.26,
+        "mean_p_aranjiya": 0.1688
+      },
+      "nazarat_adapted": {
+        "n": 376,
+        "pct_fusha": 65.96,
+        "pct_aranjiya": 34.04,
+        "mean_p_aranjiya": 0.3604
+      },
+      "hayati": {
+        "n": 1550,
+        "pct_fusha": 70.39,
+        "pct_aranjiya": 29.61,
+        "mean_p_aranjiya": 0.3263
+      },
+      "sabil_altaj": {
+        "n": 513,
+        "pct_fusha": 60.82,
+        "pct_aranjiya": 39.18,
+        "mean_p_aranjiya": 0.3971
+      },
+      "maba3d_alayyam": {
+        "n": 1639,
+        "pct_fusha": 23.37,
+        "pct_aranjiya": 76.63,
+        "mean_p_aranjiya": 0.7467
+      }
+    },
+    "opus_test_per_corpus": {
+      "opus:OpenSubtitles": {
+        "n": 1000,
+        "pct_fusha": 1.5,
+        "pct_aranjiya": 98.5,
+        "mean_p_aranjiya": 0.9661
+      },
+      "opus:TED2020": {
+        "n": 1000,
+        "pct_fusha": 0.7,
+        "pct_aranjiya": 99.3,
+        "mean_p_aranjiya": 0.9845
+      },
+      "opus:News-Commentary": {
+        "n": 1000,
+        "pct_fusha": 0.0,
+        "pct_aranjiya": 100.0,
+        "mean_p_aranjiya": 0.9935
+      },
+      "opus:GlobalVoices": {
+        "n": 1000,
+        "pct_fusha": 0.9,
+        "pct_aranjiya": 99.1,
+        "mean_p_aranjiya": 0.978
+      }
+    },
+    "regression_masking": {
+      "classical_pct_fusha_orig": 94.36,
+      "classical_pct_fusha_masked": 94.79,
+      "classical_flips_f2a": 0,
+      "classical_flip_rate_pct": 0.0,
+      "twins_pct_aranjiya_orig": 95.66,
+      "twins_pct_aranjiya_masked": 95.66,
+      "twins_flips_a2f": 0,
+      "twins_flip_rate_pct": 0.0
+    },
+    "regression_voice_on_nazarat_essays": {
+      "with_voice_words": {
+        "n": 242,
+        "pct_fusha": 81.82,
+        "pct_aranjiya": 18.18,
+        "mean_p_aranjiya": 0.2259
+      },
+      "without_voice_words": {
+        "n": 2833,
+        "pct_fusha": 88.25,
+        "pct_aranjiya": 11.75,
+        "mean_p_aranjiya": 0.164
+      },
+      "pct_fusha_gap": 6.43
+    }
+  },
+  "ensemble_p_vs_logit_pairwise_check": {
+    "calque_contexts_p_avg": 38,
+    "calque_contexts_logit_avg": 38,
+    "calque_sentences_p_avg": 38,
+    "calque_sentences_logit_avg": 38,
+    "clean_test_pw_p_avg": 99.13,
+    "clean_test_pw_logit_avg": 98.92,
+    "haiku_nr_pw_p_avg": 90.68,
+    "haiku_nr_pw_logit_avg": 92.8,
+    "hard_test_pw_p_avg": 100.0,
+    "hard_test_pw_logit_avg": 100.0
+  },
+  "companion_v3_tfidf": {
+    "clean_test": {
+      "n": 922,
+      "n_pairs": 461,
+      "acc": 92.73,
+      "classical_pct_fusha": 93.93,
+      "twin_pct_aranjiya": 91.54,
+      "pairwise_acc": 98.26,
+      "pairwise_ok": 453
+    },
+    "haiku_non_recalled_lt_045": {
+      "n": 472,
+      "n_pairs": 236,
+      "acc": 63.56,
+      "classical_pct_fusha": 95.76,
+      "twin_pct_aranjiya": 31.36,
+      "pairwise_acc": 85.59,
+      "pairwise_ok": 202,
+      "twin_p_quartiles": {
+        "q1": 0.1636,
+        "median": 0.3376,
+        "q3": 0.5913
+      }
+    },
+    "haiku_all_436": {
+      "n": 872,
+      "n_pairs": 436,
+      "acc": 59.86,
+      "classical_pct_fusha": 95.64,
+      "twin_pct_aranjiya": 24.08,
+      "pairwise_acc": 80.96,
+      "pairwise_ok": 353,
+      "twin_p_quartiles": {
+        "q1": 0.1239,
+        "median": 0.2758,
+        "q3": 0.4945
+      }
+    },
+    "hard_test": {
+      "n": 83,
+      "n_pairs": 36,
+      "acc": 79.52,
+      "classical_pct_fusha": 91.67,
+      "twin_pct_aranjiya": 70.21,
+      "pairwise_acc": 88.89,
+      "pairwise_ok": 32
+    },
+    "calque_pairs": {
+      "contexts": {
+        "overall": {
+          "n": 38,
+          "correct": 35,
+          "pct": 92.11,
+          "mean_diff": 0.1486
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": 16,
+            "correct": 16,
+            "pct": 100.0,
+            "mean_diff": 0.2525
+          },
+          "original_is_calque": {
+            "n": 22,
+            "correct": 19,
+            "pct": 86.36,
+            "mean_diff": 0.073
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": 26,
+            "correct": 23,
+            "pct": 88.46,
+            "mean_diff": 0.0824
+          },
+          "nazarat": {
+            "n": 12,
+            "correct": 12,
+            "pct": 100.0,
+            "mean_diff": 0.2919
+          }
+        },
+        "wrong_ids": [
+          "cp06",
+          "cp11",
+          "cp21"
+        ],
+        "wrong_pairs": [
+          {
+            "id": "cp06",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.0162,
+            "p_calque": 0.2103,
+            "p_native": 0.2265
+          },
+          {
+            "id": "cp11",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.0015,
+            "p_calque": 0.0048,
+            "p_native": 0.0064
+          },
+          {
+            "id": "cp21",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.0171,
+            "p_calque": 0.119,
+            "p_native": 0.1361
+          }
+        ]
+      },
+      "sentences": {
+        "overall": {
+          "n": 38,
+          "correct": 35,
+          "pct": 92.11,
+          "mean_diff": 0.3103
+        },
+        "by_direction": {
+          "calque_inserted": {
+            "n": 16,
+            "correct": 16,
+            "pct": 100.0,
+            "mean_diff": 0.4435
+          },
+          "original_is_calque": {
+            "n": 22,
+            "correct": 19,
+            "pct": 86.36,
+            "mean_diff": 0.2134
+          }
+        },
+        "by_book": {
+          "hayati": {
+            "n": 26,
+            "correct": 23,
+            "pct": 88.46,
+            "mean_diff": 0.2545
+          },
+          "nazarat": {
+            "n": 12,
+            "correct": 12,
+            "pct": 100.0,
+            "mean_diff": 0.4312
+          }
+        },
+        "wrong_ids": [
+          "cp06",
+          "cp11",
+          "cp21"
+        ],
+        "wrong_pairs": [
+          {
+            "id": "cp06",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.0971,
+            "p_calque": 0.6911,
+            "p_native": 0.7882
+          },
+          {
+            "id": "cp11",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.017,
+            "p_calque": 0.0193,
+            "p_native": 0.0362
+          },
+          {
+            "id": "cp21",
+            "book": "hayati",
+            "direction": "original_is_calque",
+            "diff": -0.0785,
+            "p_calque": 0.0894,
+            "p_native": 0.1679
+          }
+        ]
+      }
+    },
+    "modern_books": {
+      "nazarat_essays": {
+        "n": 3075,
+        "pct_fusha": 89.2,
+        "pct_aranjiya": 10.8,
+        "mean_p_aranjiya": 0.2233
+      },
+      "nazarat_adapted": {
+        "n": 376,
+        "pct_fusha": 79.79,
+        "pct_aranjiya": 20.21,
+        "mean_p_aranjiya": 0.307
+      },
+      "hayati": {
+        "n": 1550,
+        "pct_fusha": 85.03,
+        "pct_aranjiya": 14.97,
+        "mean_p_aranjiya": 0.265
+      },
+      "sabil_altaj": {
+        "n": 513,
+        "pct_fusha": 78.95,
+        "pct_aranjiya": 21.05,
+        "mean_p_aranjiya": 0.3016
+      },
+      "maba3d_alayyam": {
+        "n": 1639,
+        "pct_fusha": 53.02,
+        "pct_aranjiya": 46.98,
+        "mean_p_aranjiya": 0.4736
+      }
+    },
+    "opus_test_per_corpus": {
+      "opus:OpenSubtitles": {
+        "n": 1000,
+        "pct_fusha": 10.6,
+        "pct_aranjiya": 89.4,
+        "mean_p_aranjiya": 0.7944
+      },
+      "opus:TED2020": {
+        "n": 1000,
+        "pct_fusha": 7.5,
+        "pct_aranjiya": 92.5,
+        "mean_p_aranjiya": 0.8294
+      },
+      "opus:News-Commentary": {
+        "n": 1000,
+        "pct_fusha": 4.7,
+        "pct_aranjiya": 95.3,
+        "mean_p_aranjiya": 0.834
+      },
+      "opus:GlobalVoices": {
+        "n": 1000,
+        "pct_fusha": 16.0,
+        "pct_aranjiya": 84.0,
+        "mean_p_aranjiya": 0.7417
+      }
+    },
+    "regression_masking": {
+      "classical_pct_fusha_orig": 93.93,
+      "classical_pct_fusha_masked": 94.79,
+      "classical_flips_f2a": 0,
+      "classical_flip_rate_pct": 0.0,
+      "twins_pct_aranjiya_orig": 91.54,
+      "twins_pct_aranjiya_masked": 89.59,
+      "twins_flips_a2f": 9,
+      "twins_flip_rate_pct": 1.95
+    },
+    "regression_voice_on_nazarat_essays": {
+      "with_voice_words": {
+        "n": 242,
+        "pct_fusha": 84.71,
+        "pct_aranjiya": 15.29,
+        "mean_p_aranjiya": 0.2451
+      },
+      "without_voice_words": {
+        "n": 2833,
+        "pct_fusha": 89.59,
+        "pct_aranjiya": 10.41,
+        "mean_p_aranjiya": 0.2214
+      },
+      "pct_fusha_gap": 4.88
+    }
+  }
+}

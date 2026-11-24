@@ -1,0 +1,22 @@
+numpy
+scipy
+scikit-learn
+joblib
+pandas
+tqdm
+torch
+transformers>=4.44
+datasets
+accelerate
+sentencepiece
+sacremoses
+
+# Optional — demo UI
+# gradio
+
+# Optional — dataset construction & filtering
+# sentence-transformers
+# wordfreq
+# deep-translator
+# anthropic
+# google-genai

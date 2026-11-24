@@ -1,0 +1,83 @@
+{"id": "own1-f", "pair_id": "own1", "category": "own_pairs", "label": "fusha", "text": "ولله على الناس حج البيت من استطاع إليه سبيلا", "note": ""}
+{"id": "own1-a", "pair_id": "own1", "category": "own_pairs", "label": "aranjiya", "text": "تنفيذ مناسك الحج للبيت لمن تتوفر لديه القدرة والإمكانية على ذلك", "note": ""}
+{"id": "own2-f", "pair_id": "own2", "category": "own_pairs", "label": "fusha", "text": "يا أمتا لا تحزني وثقي بفضل الله فيه", "note": ""}
+{"id": "own2-a", "pair_id": "own2", "category": "own_pairs", "label": "aranjiya", "text": "لا تشعري بالحزن يا أمي، وكوني واثقة بأن الله سوف يكون رحيما بي", "note": ""}
+{"id": "own3-f", "pair_id": "own3", "category": "own_pairs", "label": "fusha", "text": "أراك عصي الدمع شيمتك الصبر، أما للهوى نهي عليك ولا أمر", "note": ""}
+{"id": "own3-a", "pair_id": "own3", "category": "own_pairs", "label": "aranjiya", "text": "يبدو لي أنه من الصعب عليك البكاء، وتتمتع بالقدرة على الصبر، ألا يملك الحب أي سيطرة عليك؟", "note": ""}
+{"id": "own4-f", "pair_id": "own4", "category": "own_pairs", "label": "fusha", "text": "يجني الخليل فأستحلي جنايته", "note": ""}
+{"id": "own4-a", "pair_id": "own4", "category": "own_pairs", "label": "aranjiya", "text": "يقوم حبيبي بارتكاب جريمة نحوي، ولكني أعتبر جريمته شيئا جميلا", "note": ""}
+{"id": "own5-f", "pair_id": "own5", "category": "own_pairs", "label": "fusha", "text": "إذا المرء لا يرعاك إلا تكلفا، فدعه ولا تكثر عليه التأسفا", "note": ""}
+{"id": "own5-a", "pair_id": "own5", "category": "own_pairs", "label": "aranjiya", "text": "إذا كان الشخص لا يهتم بك إلا لأنه يشعر أنه مضطر لذلك، فدعه يذهب ولا تقض الكثير من الوقت في الشعور بالأسف تجاه ذلك", "note": ""}
+{"id": "own6-f", "pair_id": "own6", "category": "own_pairs", "label": "fusha", "text": "وكنت أطمع أن أصير مترجما", "note": ""}
+{"id": "own6-a", "pair_id": "own6", "category": "own_pairs", "label": "aranjiya", "text": "وكنت أحلم بأن أصبح مترجما", "note": ""}
+{"id": "own7-f", "pair_id": "own7", "category": "own_pairs", "label": "fusha", "text": "أهديك هدية يسيرة", "note": ""}
+{"id": "own7-a", "pair_id": "own7", "category": "own_pairs", "label": "aranjiya", "text": "أقدم لك هدية متواضعة", "note": ""}
+{"id": "own8-f", "pair_id": "own8", "category": "own_pairs", "label": "fusha", "text": "حقك علي، لا تؤاخذني", "note": ""}
+{"id": "own8-a", "pair_id": "own8", "category": "own_pairs", "label": "aranjiya", "text": "أنا آسف جدا، أرجو أن تقبل اعتذاري", "note": ""}
+{"id": "book1-f", "pair_id": "book1", "category": "book_contrasts", "label": "fusha", "text": "قسا قلبه بعد موت أبيه", "note": "فعل من الصفة"}
+{"id": "book1-a", "pair_id": "book1", "category": "book_contrasts", "label": "aranjiya", "text": "أصبح قلبه قاسيا بعد وفاة والده", "note": "فعل من الصفة"}
+{"id": "book2-f", "pair_id": "book2", "category": "book_contrasts", "label": "fusha", "text": "اصبر ولا تعجل", "note": "فعل من الصفة"}
+{"id": "book2-a", "pair_id": "book2", "category": "book_contrasts", "label": "aranjiya", "text": "كن صبورا ولا تكن متسرعا", "note": "فعل من الصفة"}
+{"id": "book3-f", "pair_id": "book3", "category": "book_contrasts", "label": "fusha", "text": "فأضحكه حديثه حتى استلقى على قفاه", "note": "أضحك / جعله يضحك؛ حتى / إلى درجة أن"}
+{"id": "book3-a", "pair_id": "book3", "category": "book_contrasts", "label": "aranjiya", "text": "جعله حديثه يضحك إلى درجة أنه سقط على ظهره", "note": "أضحك / جعله يضحك؛ حتى / إلى درجة أن"}
+{"id": "book4-f", "pair_id": "book4", "category": "book_contrasts", "label": "fusha", "text": "بت عنده ليلتين", "note": "لمدة = for"}
+{"id": "book4-a", "pair_id": "book4", "category": "book_contrasts", "label": "aranjiya", "text": "بقيت عنده لمدة ليلتين", "note": "لمدة = for"}
+{"id": "book5-f", "pair_id": "book5", "category": "book_contrasts", "label": "fusha", "text": "تضاربوا في السوق حتى فرق بينهم الشرط", "note": "تفاعل / بعضهم البعض"}
+{"id": "book5-a", "pair_id": "book5", "category": "book_contrasts", "label": "aranjiya", "text": "قاموا بضرب بعضهم البعض في السوق حتى قامت الشرطة بالتفريق بينهم", "note": "تفاعل / بعضهم البعض"}
+{"id": "book6-f", "pair_id": "book6", "category": "book_contrasts", "label": "fusha", "text": "صب لي ماء", "note": "تنوين / بعض"}
+{"id": "book6-a", "pair_id": "book6", "category": "book_contrasts", "label": "aranjiya", "text": "صب لي بعض الماء", "note": "تنوين / بعض"}
+{"id": "book7-f", "pair_id": "book7", "category": "book_contrasts", "label": "fusha", "text": "هو في الشعر حسن، وفي الكتابة ضعيف", "note": "الكاف/بوصفه = as"}
+{"id": "book7-a", "pair_id": "book7", "category": "book_contrasts", "label": "aranjiya", "text": "بوصفه شاعرا هو جيد، لكن بوصفه كاتبا هو ضعيف", "note": "الكاف/بوصفه = as"}
+{"id": "book8-f", "pair_id": "book8", "category": "book_contrasts", "label": "fusha", "text": "كان لهم في فتح البلاد أثر جليل وغناء", "note": "لعب دورا"}
+{"id": "book8-a", "pair_id": "book8", "category": "book_contrasts", "label": "aranjiya", "text": "لعبوا دورا مهما في فتح البلاد", "note": "لعب دورا"}
+{"id": "book9-f", "pair_id": "book9", "category": "book_contrasts", "label": "fusha", "text": "أستودعك الله يا أخي", "note": "التحية"}
+{"id": "book9-a", "pair_id": "book9", "category": "book_contrasts", "label": "aranjiya", "text": "إلى اللقاء يا أخي، أراك لاحقا", "note": "التحية"}
+{"id": "book10-f", "pair_id": "book10", "category": "book_contrasts", "label": "fusha", "text": "أبي يقرئك السلام", "note": "التحية"}
+{"id": "book10-a", "pair_id": "book10", "category": "book_contrasts", "label": "aranjiya", "text": "أبي يرسل إليك تحياته", "note": "التحية"}
+{"id": "book11-f", "pair_id": "book11", "category": "book_contrasts", "label": "fusha", "text": "جزاك الله خيرا على ما صنعت", "note": "الشكر"}
+{"id": "book11-a", "pair_id": "book11", "category": "book_contrasts", "label": "aranjiya", "text": "أقدر لك مساعدتك، وتقبل شكري وامتناني", "note": "الشكر"}
+{"id": "book12-f", "pair_id": "book12", "category": "book_contrasts", "label": "fusha", "text": "قالت: كأنه هو", "note": "كأن / يبدو كما لو"}
+{"id": "book12-a", "pair_id": "book12", "category": "book_contrasts", "label": "aranjiya", "text": "قالت: يبدو كما لو كان هو", "note": "كأن / يبدو كما لو"}
+{"id": "book13-f", "pair_id": "book13", "category": "book_contrasts", "label": "fusha", "text": "خطب إليه ابنته فزوجه", "note": "طلب يدها"}
+{"id": "book13-a", "pair_id": "book13", "category": "book_contrasts", "label": "aranjiya", "text": "طلب يد ابنته فوافق على الزواج", "note": "طلب يدها"}
+{"id": "book14-f", "pair_id": "book14", "category": "book_contrasts", "label": "fusha", "text": "ما في قلبه رحمة", "note": "هناك"}
+{"id": "book14-a", "pair_id": "book14", "category": "book_contrasts", "label": "aranjiya", "text": "ليس هناك أي رحمة في قلبه", "note": "هناك"}
+{"id": "book15-f", "pair_id": "book15", "category": "book_contrasts", "label": "fusha", "text": "أبطأ علينا فلان اليوم", "note": "أبطأ / جاء متأخرا"}
+{"id": "book15-a", "pair_id": "book15", "category": "book_contrasts", "label": "aranjiya", "text": "جاء فلان متأخرا اليوم", "note": "أبطأ / جاء متأخرا"}
+{"id": "book16-f", "pair_id": "book16", "category": "book_contrasts", "label": "fusha", "text": "هو أحسن الناس خلقا", "note": "التفضيل"}
+{"id": "book16-a", "pair_id": "book16", "category": "book_contrasts", "label": "aranjiya", "text": "هو الشخص الأفضل أخلاقا من بين جميع الناس", "note": "التفضيل"}
+{"id": "book17-f", "pair_id": "book17", "category": "book_contrasts", "label": "fusha", "text": "لبس خاتم حديد وثوب صوف", "note": "النعت للمادة"}
+{"id": "book17-a", "pair_id": "book17", "category": "book_contrasts", "label": "aranjiya", "text": "ارتدى خاتما حديديا وقميصا صوفيا", "note": "النعت للمادة"}
+{"id": "book18-f", "pair_id": "book18", "category": "book_contrasts", "label": "fusha", "text": "أكبر همنا أن نرجع سالمين", "note": "الرئيسي"}
+{"id": "book18-a", "pair_id": "book18", "category": "book_contrasts", "label": "aranjiya", "text": "السبب الرئيسي لقلقنا هو أن نعود بسلام", "note": "الرئيسي"}
+{"id": "book19-f", "pair_id": "book19", "category": "book_contrasts", "label": "fusha", "text": "عابه الناس أشد العيب", "note": "وجه انتقادات + المبني للمجهول"}
+{"id": "book19-a", "pair_id": "book19", "category": "book_contrasts", "label": "aranjiya", "text": "وجهت إليه انتقادات مرة من قبل الناس", "note": "وجه انتقادات + المبني للمجهول"}
+{"id": "book20-f", "pair_id": "book20", "category": "book_contrasts", "label": "fusha", "text": "أحب الطعام إلي التمر", "note": "المفضل"}
+{"id": "book20-a", "pair_id": "book20", "category": "book_contrasts", "label": "aranjiya", "text": "الطعام المفضل لدي هو التمر", "note": "المفضل"}
+{"id": "book21-f", "pair_id": "book21", "category": "book_contrasts", "label": "fusha", "text": "لا يجوز لنا معاشر المسلمين أن نفعل هذا", "note": "بوصفنا"}
+{"id": "book21-a", "pair_id": "book21", "category": "book_contrasts", "label": "aranjiya", "text": "بوصفنا مسلمين لا يجوز لنا القيام بهذا الأمر", "note": "بوصفنا"}
+{"id": "book22-f", "pair_id": "book22", "category": "book_contrasts", "label": "fusha", "text": "كيف أصبحت يا أبا محمد؟", "note": "السؤال عن الحال"}
+{"id": "book22-a", "pair_id": "book22", "category": "book_contrasts", "label": "aranjiya", "text": "كيف حال صحتك اليوم يا أبا محمد؟", "note": "السؤال عن الحال"}
+{"id": "book23-f", "pair_id": "book23", "category": "book_contrasts", "label": "fusha", "text": "صفه لي", "note": "يبدو"}
+{"id": "book23-a", "pair_id": "book23", "category": "book_contrasts", "label": "aranjiya", "text": "كيف كان يبدو؟", "note": "يبدو"}
+{"id": "book24-f", "pair_id": "book24", "category": "book_contrasts", "label": "fusha", "text": "تحالفوا على قتاله", "note": "تفاعل"}
+{"id": "book24-a", "pair_id": "book24", "category": "book_contrasts", "label": "aranjiya", "text": "قاموا بالتحالف مع بعضهم البعض من أجل محاربته", "note": "تفاعل"}
+{"id": "book25-f", "pair_id": "book25", "category": "book_contrasts", "label": "fusha", "text": "لن نترك رجلا ولا طفلا", "note": "أو = or"}
+{"id": "book25-a", "pair_id": "book25", "category": "book_contrasts", "label": "aranjiya", "text": "لن نترك رجلا أو طفلا", "note": "أو = or"}
+{"id": "book26-f", "pair_id": "book26", "category": "book_contrasts", "label": "fusha", "text": "الطهور ماؤه الحل ميتته", "note": "النعت السببي"}
+{"id": "book26-a", "pair_id": "book26", "category": "book_contrasts", "label": "aranjiya", "text": "ماؤه طاهر، والحيوانات الميتة فيه حلال أكلها", "note": "النعت السببي"}
+{"id": "book27-f", "pair_id": "book27", "category": "book_contrasts", "label": "fusha", "text": "ترك الأمر وأعرض عنه", "note": "تجاهل / بشكل"}
+{"id": "book27-a", "pair_id": "book27", "category": "book_contrasts", "label": "aranjiya", "text": "قام بتجاهل الأمر بشكل كامل", "note": "تجاهل / بشكل"}
+{"id": "book28-f", "pair_id": "book28", "category": "book_contrasts", "label": "fusha", "text": "كانت له في المال سعة، ثم خرج لضيق في المال", "note": "الحياة الاقتصادية"}
+{"id": "book28-a", "pair_id": "book28", "category": "book_contrasts", "label": "aranjiya", "text": "كانت حياته الاقتصادية جيدة، لكنه غادر لأسباب اقتصادية", "note": "الحياة الاقتصادية"}
+{"id": "old1", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "لعب الخليفة هارون الرشيد دورا محوريا في ازدهار الحياة الثقافية في بغداد، حيث قام بتشجيع العلماء والشعراء على الإقامة في عاصمته.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old2", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "يعتبر الجاحظ واحدا من أكثر الكتاب تأثيرا في تاريخ الأدب العربي، وقد تمتع بقدرة استثنائية على الملاحظة وروح دعابة لا مثيل لها.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old3", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "بالرغم من حقيقة أن المأمون كان شغوفا بالفلسفة، إلا أنه لم يتردد في استخدام القوة ضد أولئك الذين عارضوا آراءه.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old4", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "عندما وصل طارق بن زياد إلى شواطئ الأندلس، قام بإصدار أوامره بحرق السفن، في خطوة تهدف إلى إظهار أنه لا توجد طريقة للعودة.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old5", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "كان المتنبي شخصا فخورا للغاية بنفسه، وقد عانى طوال حياته من شعور عميق بعدم التقدير من قبل الحكام الذين خدمهم.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old6", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "في ذلك الوقت، كانت قرطبة واحدة من أكبر المدن في العالم، وكانت تضم مكتبات تحتوي على مئات الآلاف من الكتب.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old7", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "اتخذ عمر بن الخطاب موقفا حازما تجاه الولاة الذين أساؤوا استخدام سلطتهم، وكان يقوم بمحاسبتهم بشكل منتظم.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old8", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "تمكن صلاح الدين من توحيد مصر والشام تحت قيادته، الأمر الذي سمح له في نهاية المطاف باستعادة القدس.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old9", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "من الواضح أن ابن خلدون كان سابقا لعصره، فقد قدم نظرية حول صعود الدول وسقوطها لا تزال ذات صلة حتى يومنا هذا.", "note": "written in translated style by Claude; classical subject"}
+{"id": "old10", "pair_id": null, "category": "translated_old_topic", "label": "aranjiya", "text": "شعر الأعرابي بالغضب الشديد عندما رأى الناس يرتكبون الأخطاء في اللغة، فقال لهم إنهم يرتكبون الأخطاء ومع ذلك يحققون الأرباح.", "note": "written in translated style by Claude; classical subject"}
+{"id": "reductio1", "pair_id": null, "category": "reductio", "label": "aranjiya", "text": "أمرت قهوة ضعيفة من المقهى حيث هناك رجل عنده شعر مستقيم ويلبسه منخفضا، وكان لباسه ذكيا، ثم عثرت على أنني لا أحمل علي مالا", "note": "al-Ghamdi: every word 'justifiable', the whole sentence is English"}

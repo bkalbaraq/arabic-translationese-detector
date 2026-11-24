@@ -1,0 +1,25 @@
+# Large corpora, caches, raw/processed datasets (includes copyrighted modern texts locally)
+openiti/
+data/opus/
+data/cache/
+data/raw/
+data/processed*/
+
+# Trained model weights (publish weights on Hugging Face, not in git)
+models/
+
+# Old v1 notebook
+notebooks/
+
+# Intermediate experiment logs (keep only the frozen final metrics)
+results/*
+!results/v3_final_metrics.json
+
+# Local environment and Python artifacts
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.epub
+*.log
+.DS_Store
