@@ -8,6 +8,7 @@ Run:
   python app.py
 """
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -41,6 +42,27 @@ def load_detector() -> AranjiyaDetector:
     return AranjiyaDetector(bert_paths=bert_paths or None, baseline_path=baseline_path)
 
 
+# The models were trained on passages of roughly 15-60 words. Very short inputs give
+# them too little to judge, so their score is unreliable (e.g. «اسقني الماء» scores
+# as عرنجية). Below this many Arabic words, the app shows a warning.
+MIN_RELIABLE_WORDS = 10
+ARABIC_WORD = re.compile(r"[\u0621-\u064A]+")
+
+
+def length_note(text: str) -> str:
+    """Return a warning for inputs too short to score reliably, else an empty string."""
+    n = len(ARABIC_WORD.findall(text or ""))
+    if n == 0 or n >= MIN_RELIABLE_WORDS:
+        return ""
+    return (
+        f"⚠️ **النص قصير (عدد كلماته {n})، فالنتيجة غير موثوقة.** "
+        f"دُرِّب النموذج على فقرات من نحو 15 إلى 60 كلمة. "
+        f"الصق فقرة أطول، أو قارن بين صيغتين للجملة نفسها: الصيغة الأعلى درجة هي الأقرب إلى العرنجية.\n\n"
+        f"*Short text ({n} words): this score is unreliable. The model was trained on passages "
+        f"of about 15-60 words. Paste a longer passage, or compare two versions of the same sentence.*"
+    )
+
+
 EXAMPLES = [
     ["لعب دورا مهما في فتح البلاد، وذلك على الرغم من التحديات الكبيرة التي واجهت الجيش."],
     ["كان له في فتح البلاد أثر جليل، مع ما لقي الجيش من شدائد وعوائق."],
@@ -64,7 +86,7 @@ def main():
     def analyze(text: str):
         text = (text or "").strip()
         if not text:
-            return {}, []
+            return {}, [], ""
         res = detector.score(text)
         p_ar = res["p_aranjiya"]
         scores = {"عرنجية (translationese)": p_ar, "فصحى (native Arabic)": round(1.0 - p_ar, 4)}
@@ -78,7 +100,7 @@ def main():
             else:
                 tag = None
             spans.append((tok + " ", tag))
-        return scores, spans
+        return scores, spans, length_note(text)
 
     with gr.Blocks(title="كاشف العرنجية — Aranjiya Detector") as demo:
         gr.Markdown(
@@ -86,11 +108,14 @@ def main():
             f"Scores Arabic prose between native **فصحى** and English-influenced **عرنجية**.\n\n"
             f"- **Scorer:** {model_desc}\n"
             f"- **Word highlights:** TF-IDF companion model (approximates word-level push; "
-            f"the CAMeLBERT score itself uses full sentence context)."
+            f"the CAMeLBERT score itself uses full sentence context).\n"
+            f"- **Tip:** works best on passages of {MIN_RELIABLE_WORDS}+ words. For short sentences, "
+            f"compare two versions rather than reading one score on its own."
         )
         inp = gr.Textbox(label="النص العربي", placeholder="اكتب أو الصق فقرة عربية هنا...", lines=4, rtl=True)
         btn = gr.Button("تحليل", variant="primary")
         out_label = gr.Label(label="النتيجة", num_top_classes=2)
+        out_note = gr.Markdown()
         out_hl = gr.HighlightedText(
             label="الكلمات المؤثرة (من النموذج الخطي المرافق)",
             color_map={"عرنجية": "red", "فصحى": "green"},
@@ -98,8 +123,8 @@ def main():
         )
         gr.Examples(examples=EXAMPLES, inputs=inp)
 
-        btn.click(analyze, inputs=inp, outputs=[out_label, out_hl])
-        inp.submit(analyze, inputs=inp, outputs=[out_label, out_hl])
+        btn.click(analyze, inputs=inp, outputs=[out_label, out_hl, out_note])
+        inp.submit(analyze, inputs=inp, outputs=[out_label, out_hl, out_note])
 
     demo.launch()
 
